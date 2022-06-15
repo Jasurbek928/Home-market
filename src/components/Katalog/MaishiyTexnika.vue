@@ -1,6 +1,6 @@
 <template>
-  <div class="card-item">
-    <VashingChild
+  <div class="inner mx-auto card-item">
+    <MaishiyTexnikaChild
       v-for="(product,id) in products"
       :key="id"
       :product="product"
@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import VashingChild from '../../components/VashingChild.vue';
+import MaishiyTexnikaChild from '../../components/Katalog/MaishiyTexnikaChild.vue';
 
 export default {
   components: {
-    VashingChild,
+    MaishiyTexnikaChild,
   },
   data() {
     return {
@@ -68,10 +68,11 @@ export default {
 
 <style>
 .card-item{
+ 
   justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
-  /* margin: 10px; */
+  margin: 10px;
 
 }
 </style>

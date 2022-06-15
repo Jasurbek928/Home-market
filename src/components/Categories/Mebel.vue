@@ -41,6 +41,13 @@ export default {
             price: "1 990",
             currency: "So'm",
           },
+          {
+             id: 4,
+            img: "4.jpg",
+            title: "Donya idishlarni yuvish uchun gel",
+            price: "1 990",
+            currency: "So'm",
+          }
           
         ]
     };

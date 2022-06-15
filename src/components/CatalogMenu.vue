@@ -1,5 +1,5 @@
 <template>
-   <div class="inner">
+   <div class="inner mx-auto">
      <div class="showCase">
       <div class="menu">
         <div class=" text-white d-flex align-items-center" style="background-color:#dc0b0f;padding: 14px;">
@@ -13,10 +13,10 @@
           </div>
         </div>
       <div class="menu-top">
-        <a href="#">
+        <router-link to="/category/1">
           <i class="icon-malish"></i>
           <span>Bolalar mebellari</span>
-        </a>
+        </router-link>
         <a href="#">
           <i class="icon-aksesuari"></i>
           <span>Oshxona mebellari</span>
@@ -29,17 +29,17 @@
           <i class="icon-kosmetika"></i>
           <span>Tozalash jihozlari</span>
         </a>
-        <a href="#">
+        <router-link to="/category/5">
           <i class="icon-aksesuari"></i>
-          <span>Maishiy buyumlar va aksessuarlar</span>
-        </a>
+          <span>Maishiy texnika</span>
+        </router-link>
         <a href="#">
           <i class="icon-frukti"></i>
           <span>Oziq-ovqat</span>
         </a>
       </div>
       </div>
-      <div class="carousel-box">
+      <div class="carousel-box pe-3">
         <VueSlickCarousel class="carousel-item"
           :arrows="false"
           :dots="true"
@@ -77,11 +77,10 @@ export default {
 <style>
 :root {
   --width: 300px;
-  --gap: 2rem;
+  --gap: 1rem;
 }
 .showCase{
     display: flex;
-    /* min-height: 100vh; */
     gap: var(--gap);
     margin-top: 20px;
 }
@@ -95,6 +94,7 @@ export default {
 }
 .carousel-box {
   width: calc(100% - var(--width));
+  
 }
 .carousel-box div, .carousel-box img {
   height: 100%;
@@ -102,7 +102,6 @@ export default {
 .carousel-box .slick-dots {
   bottom: 10px;
 }
-
 .carousel-box .slick-dots li button::before {
   color: #fff;
   font-size: 15px;
@@ -110,7 +109,6 @@ export default {
 .menu-top {
   padding: 1rem 0;
   display: grid;
-  /* gap: 1rem; */
 }
 .menu-top a{
   grid-template-columns: 1rem auto;
@@ -131,6 +129,6 @@ export default {
 .menu-top a:hover{
   background-color: #FFE8E8;
   transform: scale(1.1);
-  transition: all 0.6s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 </style>

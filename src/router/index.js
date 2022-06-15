@@ -9,7 +9,7 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    // redirect: '/',
+    redirect: 'first-product-page',
     component: HomeView,
     children:[
       {
@@ -32,29 +32,20 @@ const routes = [
         path:'cake',
         name:'PlumCake',
         component:()=> import("../components/Categories/PlumCake.vue")
-      }
+      },
     ],
-    
-  //   links:[
-  //     {
-  //         path:'/home',
-  //         name:'Kompaniya haqida',
-  //     },
-  //     {
-  //         path:'/buyurtma',
-  //         name:'Buyurtmani qanday qilish kerak',
-  //     },
-  //     {
-  //         path:'/dokon',    
-  //         name:'Bizning dokonlarimiz',
-  //     },
-  //     {
-  //         path:'/qayta-aloqa',
-  //         name:'Qayta aloqa',
-  //     }
-  // ]
+   
+  },
+  {
+    path: '/category/:id',
+    name: 'category',
+    component: () => import('../views/CategoryView.vue'),
+   
+   
   }
 ]
+
+
 
 
 const router = new VueRouter({

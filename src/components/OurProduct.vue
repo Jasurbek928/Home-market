@@ -45,9 +45,9 @@ export default {
             id: 4,
             name: "PLUM CAKE",
             path: "/cake"
-          }
-        
-        ]
+          },
+         
+        ],
       }
     }
 }
