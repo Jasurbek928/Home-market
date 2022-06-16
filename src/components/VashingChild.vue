@@ -28,6 +28,7 @@
             <div class="modal-img w-50 d-flex align-items-center justify-content-center border rounded-3" >
                 <img :src="require(`../assets/img/first-product-page/${product.img}`)" alt="" class="w-75">
             </div>
+           
             <div class="text-start">
               <div class="product_title">{{product.title}}</div>
               <span>

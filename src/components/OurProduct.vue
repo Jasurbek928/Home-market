@@ -38,8 +38,8 @@ export default {
           },
           {
             id: 3,
-            name: "THE FARM STORY",
-            path: "/story"
+            name: "Maishiy Texnika",
+            path: "/maishiy-texnika"
           },
           {
             id: 4,
@@ -87,6 +87,7 @@ export default {
   text-align: center;
   border: 1px solid #b2b2b2;
   position: relative;
+  text-transform: uppercase;
 }
 #products .variants .variant.active,
 #products .variants .variant:hover {

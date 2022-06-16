@@ -24,9 +24,9 @@ const routes = [
         component:()=> import("../components/Categories/Mebel.vue")
       },
       {
-        path:'story',
-        name:'FarmStory',
-        component:()=> import("../components/Categories/FarmStory.vue")
+        path:'maishiy-texnika',
+        name:'Maishiy texnika',
+        component:()=> import("../components/Categories/MaishiyTexnika.vue")
       },
       {
         path:'cake',

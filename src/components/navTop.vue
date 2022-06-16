@@ -79,7 +79,7 @@ a{
   background: #fff;
   align-items: center;
   display: flex;
-  height: 80px;
+  height: 60px;
 }
 .dropdown-toggle::after {
   display: none !important;

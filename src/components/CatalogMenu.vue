@@ -44,7 +44,7 @@
           :arrows="false"
           :dots="true"
           autoplay="true"
-          auto-play-speed="2000"
+          auto-play-speed="1000"
          
         >
         <div class="a123">
@@ -52,6 +52,15 @@
         </div>
         <div>
           <img class="w-100" src="../assets/img/carousel-img/2.jpg" alt="">
+        </div>
+        <div>
+          <img class="w-100" src="../assets/img/carousel-img/4.jpg" alt="">
+        </div>
+         <div>
+          <img class="w-100" src="../assets/img/carousel-img/6.jpg" alt="">
+        </div>
+         <div>
+          <img class="w-100" src="../assets/img/carousel-img/5.jpg" alt="">
         </div>
          <div>
           <img class="w-100" src="../assets/img/carousel-img/3.jpg" alt="">
@@ -131,4 +140,10 @@ export default {
   transform: scale(1.1);
   transition: all 0.4s ease-in-out;
 }
+.carousel-box .slick-dots li button::before {
+    color: #fff;
+    font-size: 15px;
+}
+
+
 </style>
