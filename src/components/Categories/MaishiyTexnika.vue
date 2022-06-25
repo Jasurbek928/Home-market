@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import MaishiyTexnikaChild from '../../components/MaishiyTexnikaChild.vue';
+import MaishiyTexnikaChild from './MaishiyTexnikaChild.vue';
 
 export default {
   components: {

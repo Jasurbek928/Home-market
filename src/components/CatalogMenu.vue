@@ -13,30 +13,26 @@
           </div>
         </div>
       <div class="menu-top">
-        <router-link to="/category/1">
-          <i class="icon-malish"></i>
-          <span>Bolalar mebellari</span>
+        <router-link
+          v-for="(link , index) in links"
+          :key="index"
+          :to="link.path"
+         
+          :class="[
+                  
+                    {
+                      'bg-success': link.path == $route.path, 'text-danger': link.path != $route.path ,
+                    },
+                    link.icons
+                  ]"
+          
+          class="icon"
+          >
+         <div class="side-link">{{link.name}}</div>
         </router-link>
-        <a href="#">
-          <i class="icon-aksesuari"></i>
-          <span>Oshxona mebellari</span>
-        </a>
-        <a href="#">
-          <i class="icon-konts"></i>
-          <span>Kantselyariya jihozlari</span>
-        </a>
-        <a href="#">
-          <i class="icon-kosmetika"></i>
-          <span>Tozalash jihozlari</span>
-        </a>
-        <router-link to="/category/5">
-          <i class="icon-aksesuari"></i>
-          <span>Maishiy texnika</span>
-        </router-link>
-        <a href="#">
-          <i class="icon-frukti"></i>
-          <span>Oziq-ovqat</span>
-        </a>
+
+        
+       
       </div>
       </div>
       <div class="carousel-box pe-3">
@@ -45,9 +41,11 @@
           :dots="true"
           autoplay="true"
           auto-play-speed="1000"
-         
         >
-        <div class="a123">
+        <div>
+          <img class="w-100" src="../assets/img/carousel-img/5.jpg" alt="">
+        </div>
+        <div>
           <img class="w-100" src="../assets/img/carousel-img/1.jpg" alt="">
         </div>
         <div>
@@ -58,9 +56,6 @@
         </div>
          <div>
           <img class="w-100" src="../assets/img/carousel-img/6.jpg" alt="">
-        </div>
-         <div>
-          <img class="w-100" src="../assets/img/carousel-img/5.jpg" alt="">
         </div>
          <div>
           <img class="w-100" src="../assets/img/carousel-img/3.jpg" alt="">
@@ -80,6 +75,49 @@
 export default {
   name: 'MyComponent',
     components: { VueSlickCarousel },
+   data(){
+    return {
+       links:[
+      {
+        name: "Bolalar mebellari",
+        path: "/bola-mebel",
+        icons: "icon-malish",
+
+      },
+      {
+        name: "Oshxona mebellari",
+        path: "/oshxona",
+        icons: "icon-aksesuari",
+
+      },
+      {
+        name: "Kantselyariya jihozlari",
+        path: "/kanstovar",
+        icons: "icon-konts",
+
+      },
+      {
+        name: "Tozalash jihozlari",
+        path: "/tozalash",
+        icons: "icon-kosmetika",
+
+      },
+      {
+        name: "Maishiy texnika",
+        path: "/texnika",
+        icons: "icon-aksesuari",
+
+        
+      },
+      {
+        name: "Oziq-ovqat",
+        path: "/ovqat",
+        icons: "icon-frukti",
+
+      }
+    ]
+    }
+   }
 }
 </script>
 
@@ -126,19 +164,20 @@ export default {
   display: grid;
   gap: 1rem;
 }
-.menu-top i {
+.menu-top .icon {
   font-size: 1.3rem;
   color: #dc0b0f;
 }
-.menu-top a span{
+.menu-top .side-link{
   color: #313b41;
   font-size: 16px;
   font-family: sans-serif;
+  
 }
 .menu-top a:hover{
   background-color: #FFE8E8;
-  transform: scale(1.1);
-  transition: all 0.4s ease-in-out;
+  transform: scale(1.02);
+  transition: all 0.2s;
 }
 .carousel-box .slick-dots li button::before {
     color: #fff;

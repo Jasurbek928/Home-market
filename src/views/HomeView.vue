@@ -3,7 +3,6 @@
     <NavbarComp/>
     <Header/>
     <HeaderTop />
-   
     <CatalogMenu/>
     <div class="inner px-5 mx-auto">
       <OurProduct />

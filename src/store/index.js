@@ -7,8 +7,104 @@ export default new Vuex.Store({
   state: {
     packets:[],
     isBadge:false,
-    
   },
+  BabyMebel:[
+    {
+      id: 1,
+      img: "1.jpg",
+      title: "Donya idishlarni yuvish uchun gel",
+      price: "1 990",
+      currency: "So'm",
+    },
+    {
+      id: 2,
+      img: "2.jpg",
+      title: "Donya idishlarni yuvish uchun jel, limon",
+      price: "4 090",
+      currency: "So'm",
+    },
+    {
+      id: 3,
+      img: "3.jpg",
+      title: "Chistin universal sanitariya-gigiyena",
+      price: "13 500",
+      currency: "So'm",
+    },
+    {
+      id: 4,
+      img: "4.jpg",
+      title: "Chistin universal sanitariya-gigiyena",
+      price: "13 500",
+      currency: "So'm",
+    },
+    {
+      id: 5,
+      img: "5.jpg",
+      title: "Chistin universal sanitariya-gigiyena",
+      price: "13 500",
+      currency: "So'm",
+    },
+    {
+      type: "babymebel",
+      id: 6,
+      img: "6.jpg",
+      title: "Chistin universal sanitariya-gigiyena",
+      price: "13 500",
+      currency: "So'm",
+    },
+  ],
+  Kanstovar:[
+    {
+      type: "konstavar",
+      id: 1,
+      img: "1.jpg",
+      title: "Donya idishlarni yuvish uchun gel",
+      price: "1 990",
+      currency: "So'm",
+    },
+    {
+      id: 2,
+      img: "2.jpg",
+      title: "Donya idishlarni yuvish uchun jel, limon",
+      price: "4 090",
+      currency: "So'm",
+    },
+    {
+      id: 3,
+      img: "3.jpg",
+      title: "Chistin universal sanitariya-gigiyena",
+      price: "13 500",
+      currency: "So'm",
+    },
+    {
+      id: 4,
+      img: "4.jpg",
+      title: "Chistin universal sanitariya-gigiyena",
+      price: "13 500",
+      currency: "So'm",
+    },
+    {
+      id: 5,
+      img: "5.jpg",
+      title: "Chistin universal sanitariya-gigiyena",
+      price: "13 500",
+      currency: "So'm",
+    },
+    {
+      id: 6,
+      img: "6.jpg",
+      title: "Chistin universal sanitariya-gigiyena",
+      price: "13 500",
+      currency: "So'm",
+    },
+  ],
+  
+  // actions: {
+  //   SearchProduct( ){
+  //     this.$store.dispatch('', payload);
+  //   }
+
+  // },
   getters:{
     getPackets:state=>state.packets.length,
   },

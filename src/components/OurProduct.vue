@@ -7,7 +7,7 @@
                 v-for="(variant, index) in variants"
                 :key="index"
                 :to="variant.path"
-                class="variant"
+                 class="variant"
                 :class="{'bg-danger': variant.path == $route.path, 'text-dark': variant.path != $route.path }"
                 >
                 {{variant.name}}
@@ -43,8 +43,8 @@ export default {
           },
           {
             id: 4,
-            name: "PLUM CAKE",
-            path: "/cake"
+            name: "O'yinchoqlar",
+            path: "/oyinchoq"
           },
          
         ],

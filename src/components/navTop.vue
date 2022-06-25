@@ -1,7 +1,9 @@
 <template>
  <div id="nav" class="px-5">
     <div class="logo">
-      <img src="../assets/logo.png" alt="logo" class="w-100">
+     <router-link to="/first-product-page">
+         <img src="../assets/logo/7.png" class="w-100" alt="">
+      </router-link>
     </div>
     <div>
       <b-dropdown id="dropdown-1" variant="danger">
@@ -17,31 +19,24 @@
             </div>
           </div>
         </template>
-        <div class="menu-top">
-        <a href="#">
-          <i class="icon-malish"></i>
-          <span>Bolalar mebellari</span>
-        </a>
-        <a href="#">
-          <i class="icon-aksesuari"></i>
-          <span>Oshxona mebellari</span>
-        </a>
-        <a href="#">
-          <i class="icon-konts"></i>
-          <span>Kantselyariya jihozlari</span>
-        </a>
-        <a href="#">
-          <i class="icon-kosmetika"></i>
-          <span>Tozalash jihozlari</span>
-        </a>
-        <a href="#">
-          <i class="icon-aksesuari"></i>
-          <span>Maishiy buyumlar va aksessuarlar</span>
-        </a>
-        <a href="#">
-          <i class="icon-frukti"></i>
-          <span>Oziq-ovqat</span>
-        </a>
+         <div class="menu-top">
+        <router-link
+          v-for="(link , index) in links"
+          :key="index"
+          :to="link.path"
+          :class="[
+            {
+              'bg-success': link.path == $route.path, 'text-danger': link.path != $route.path ,
+            },
+            link.icons
+          ]"
+          class="icon"
+          >
+         <div class="side-link">{{link.name}}</div>
+        </router-link>
+
+        
+       
       </div>
       </b-dropdown>
     </div>
@@ -66,6 +61,43 @@ export default {
   components: {
     Sidebar
   },
+   data(){
+    return {
+       links:[
+      {
+        name: "Bolalar mebellari",
+        path: "/bola-mebel",
+        icons: "icon-malish"
+      },
+      {
+        name: "Oshxona mebellari",
+        path: "/oshxona",
+        icons: "icon-aksesuari"
+
+      },
+      {
+        name: "Kantselyariya jihozlari",
+        path: "/kanstovar",
+        icons: "icon-konts"
+      },
+      {
+        name: "Tozalash jihozlari",
+        path: "/tozalash",
+        icons: "icon-kosmetika"
+      },
+      {
+        name: "Maishiy texnika",
+        path: "/texnika",
+        icons: "icon-aksesuari"
+      },
+      {
+        name: "Oziq-ovqat",
+        path: "/ovqat",
+        icons: "icon-frukti"
+      }
+    ]
+    }
+   }
 };
 </script>
 
@@ -79,7 +111,7 @@ a{
   background: #fff;
   align-items: center;
   display: flex;
-  height: 60px;
+  height: 65px;
 }
 .dropdown-toggle::after {
   display: none !important;
@@ -122,4 +154,31 @@ a{
 .menu-top{
   width: 250px;
 }
+.menu-top {
+  padding: 1rem 0;
+  display: grid;
+}
+.menu-top a{
+  grid-template-columns: 1rem auto;
+  align-items: center;
+  padding: 12px 1rem;
+  display: grid;
+  gap: 1rem;
+}
+.menu-top .icon {
+  font-size: 1.3rem;
+  color: #dc0b0f;
+}
+.menu-top .side-link{
+  color: #313b41;
+  font-size: 16px;
+  font-family: sans-serif;
+  margin-left: 10px;
+}
+.menu-top a:hover{
+  background-color: #FFE8E8;
+  transform: scale(1.02);
+  transition: all 0.2s;
+}
+
 </style>

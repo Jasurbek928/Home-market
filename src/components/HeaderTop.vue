@@ -2,7 +2,9 @@
 <div class="inner mx-auto">
   <div id="nav" class="px-5 " style="padding:15px ;">
       <div class="logo">
-        <img src="../assets/logo.png" alt="logo" class="w-100">
+        <router-link to="/first-product-page">
+         <img src="../assets/logo/7.png" class="w-100" alt="">
+        </router-link>
       </div>
       <div class="phone-section">
         <img src="../assets/phone_1.svg" alt="" style="width:45px ;">
@@ -12,7 +14,7 @@
         </div>
       </div>
       <div style="width:300px;">
-        <input style="height:40px" class="search py-1 px-4 text-sm" type="search" name="" placeholder="Qidirmoq">
+        <input  @change="inputSearch()" style="height:40px" class="search py-1 px-4 text-sm" type="search" name="" placeholder="Qidirmoq">
       </div>
       <Sidebar/>
   </div>
@@ -26,6 +28,11 @@ export default {
   components: {
     Sidebar
   },
+  methods:{
+    inputSearch(e){
+      console.log(e)
+    }
+  }
 };
 
 </script>

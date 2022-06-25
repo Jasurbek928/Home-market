@@ -29,20 +29,44 @@ const routes = [
         component:()=> import("../components/Categories/MaishiyTexnika.vue")
       },
       {
-        path:'cake',
-        name:'PlumCake',
-        component:()=> import("../components/Categories/PlumCake.vue")
+        path:'oyinchoq',
+        name:'Oyinchoqlar',
+        component:()=> import("../components/Categories/Toys.vue")
       },
     ],
    
   },
   {
-    path: '/category/:id',
+    path: '/bola-mebel',
     name: 'category',
-    component: () => import('../views/CategoryView.vue'),
-   
-   
-  }
+    component: () => import('../components/SidebarCategories/BabyMebel.vue'),
+  },
+  {
+    path: '/oshxona',
+    name: 'category',
+    component: () => import('../components/SidebarCategories/OshxonaMebel.vue'),
+  },
+  {
+    path: '/kanstovar',
+    name: 'category',
+    component: () => import('../components/SidebarCategories/KanstovarJihoz.vue'),
+  },
+  {
+    path: '/tozalash',
+    name: 'category',
+    component: () => import('../components/SidebarCategories/TozalashJihoz.vue'),
+  },
+  {
+    path: '/texnika',
+    name: 'category',
+    component: () => import('../components/SidebarCategories/MaishiyTexnika.vue'),
+  },
+  {
+    path: '/ovqat',
+    name: 'category',
+    component: () => import('../components/SidebarCategories/OziqOvqat.vue'),
+  },
+  
 ]
 
 

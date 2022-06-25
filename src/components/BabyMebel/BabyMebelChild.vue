@@ -2,7 +2,7 @@
   <div class="card d-flex flex-column justify-content-between">
     <div>
       <img
-        :src="require(`../assets/img/Maishiy-Texnika/${product.img}`)"
+        :src="require(`@/assets/img/child-img/${product.img}`)"
         alt=""
       />
     </div>
@@ -11,8 +11,8 @@
         <div>{{ product.title }}</div>
         <span>
           <b>{{ product.price }}</b>
-          {{}}
-          <small>{{ product.currency }}</small>
+         
+          <small class="mx-2 fs-5">{{ product.currency }}</small>
         </span>
       </div>
       <div
@@ -36,7 +36,7 @@
               class="modal-img w-50 d-flex align-items-center justify-content-center border rounded-3"
             >
               <img
-                :src="require(`../assets/img/Maishiy-Texnika/${product.img}`)"
+                :src="require(`@/assets/img/child-img/${product.img}`)"
                 alt=""
                 class="w-75"
               />
@@ -45,13 +45,14 @@
               <div class="product_title mx-4">{{ product.title }}</div>
               <span class="mx-4">
                 <b>{{ product.price }}</b>
-                {{}}
-                <small>{{ product.currency }}</small> </span
+                
+                <small>{{ product.currency }}</small>
+              </span
               ><br />
               <button class="modal_btn_korzina mt-4">
                 <img
                   class="korzina_cart"
-                  src="../assets/icons8-basket-24.png"
+                  src="@/assets/icons8-basket-24.png"
                   alt=""
                 />
                 <p class="cart_title">Savatchaga qo'shish</p>
@@ -61,29 +62,29 @@
           <div class="social_item w-25 d-flex">
             <img
               class="share_icon"
-              src="../assets/social_links/share-nodes-solid.svg"
+              src="@/assets/social_links/share-nodes-solid.svg"
               alt=""
             />
             <div class="share_title">Ulashish:</div>
             <div class="social_l">
               <img
                 class="item"
-                src="../assets/social_links/facebook-f-brands.svg"
+                src="@/assets/social_links/facebook-f-brands.svg"
                 alt=""
               />
               <img
                 class="item"
-                src="../assets/social_links/odnoklassniki-brands.svg"
+                src="@/assets/social_links/odnoklassniki-brands.svg"
                 alt=""
               />
               <img
                 class="item"
-                src="../assets/social_links/youtube-brands.svg"
+                src="@/assets/social_links/youtube-brands.svg"
                 alt=""
               />
               <img
                 class="item"
-                src="../assets/social_links/telegram-brands.svg"
+                src="@/assets/social_links/telegram-brands.svg"
                 alt=""
               />
             </div>
@@ -97,7 +98,7 @@
 
 <script>
 export default {
-  name: "MaishiyTexnika",
+  name: "Bolalar mebellari",
   data() {
     return {
       key: Math.floor(Math.random() * 1000),
@@ -223,6 +224,9 @@ img {
   background-color: red;
   border-radius: 40px;
 
+}
+.batafsil:hover{
+  color: #fff;
 }
 .modal-body{
   height:450px;
